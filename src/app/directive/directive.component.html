@@ -1,3 +1,14 @@
-<p>
-  directive works!
-</p>
+<h1>{{titleDirective}}</h1>
+<input type="text" [value]='defaultIn' >
+<br>
+<input type="text"[(ngModel)]='doubleSens'>
+<br>
+{{doubleSens}}
+<p *ngIf="status" >p1</p>
+<p *ngIf="!status">p2</p>
+
+<button type="button" (click)='inverseStatus()' >Click here</button>
+
+<ul>
+  <li *ngFor="let item of texts" >{{item}} </li>
+</ul>

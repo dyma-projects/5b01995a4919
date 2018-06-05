@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directive.component.css']
 })
 export class DirectiveComponent implements OnInit {
+  public titleDirective: string = 'Mon Composant';
+  public defaultIn: string = 'from component';
+  public doubleSens: string = 'Default 0';
+  public status: boolean = true;
+  public texts: string[] = ['un', 'deux', 'trois'];
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit() {}
+  inverseStatus() {
+    this.status = !this.status;
   }
-
 }
